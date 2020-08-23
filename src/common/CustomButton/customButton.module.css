@@ -1,0 +1,14 @@
+.buttonWrapper {
+    margin: 2em 0;
+}
+
+.button {
+    width: 50%;
+    background-image: linear-gradient(to right, #50c0f1, #2f80ed);
+    padding: 0.7em 0;
+    border-radius: 2em;
+    border: none;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+}
