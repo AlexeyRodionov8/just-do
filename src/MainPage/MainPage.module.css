@@ -1,0 +1,67 @@
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.leftSide {
+    width: 15vw;
+    background-image: linear-gradient(#3184ED, #53C5F1);
+}
+
+.leftInside {
+    margin: 1.5em;
+}
+
+.titleBlock {
+    margin: 1em 0;
+}
+
+.itemWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.itemWrapper div {
+    margin-bottom: 1rem;
+}
+
+.menuItem,
+.activeItem,
+.addItem,
+.priorityTitle {
+    color: #FFFFFF;
+}
+
+.priorityTitle {
+    margin-right: 1em;
+    font-size: 1.2rem;
+}
+
+.activeItem {
+    border-bottom: 2px solid #FFFFFF;
+    padding-right: 0.7em;
+    padding-bottom: 0.3em;
+}
+
+.addItem {
+    font-size: 3em;
+    font-weight: 100;
+}
+
+.rightSide {
+    width: 85vw;
+    height: 100%;
+}
+
+.rightInside {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+}
+
+.content {
+    flex: 1 0 auto;
+}

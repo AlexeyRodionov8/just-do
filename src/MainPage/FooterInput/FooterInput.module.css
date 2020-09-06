@@ -1,0 +1,28 @@
+.box {
+    flex-shrink: 0;
+    background-color: coral;
+}
+
+
+.fieldBlock {
+    position: relative;
+    margin-bottom: 1.5em;
+}
+
+.field,
+.field:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #cdcdcd;
+}
+
+.field {
+    color: black;
+    line-height: 2.5em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.field::placeholder {
+    color: #cdcdcd;
+}

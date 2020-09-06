@@ -8,11 +8,16 @@ import EditPassword from './StartPage/EditPassword';
 import PrivacyPolicy from './StartPage/PrivacyPolicy';
 import TermsCondition from './StartPage/TermsCondition';
 import './App.css';
+import CircleSpinner from './common/CircleSpinner/CircleSpinner';
+import MainPage from './MainPage/MainPage';
 
 class App extends Component {
   render() {
+    const show = false;
+
     return (
       <Router>
+        {show && <CircleSpinner />}
         <Switch>
           <Route path='/' exact component={SignIn} />
           <Route path='/signin' exact component={SignIn} />
@@ -21,6 +26,7 @@ class App extends Component {
           <Route path='/password/edit' exact component={EditPassword} />
           <Route path='/policy' exact component={PrivacyPolicy} />
           <Route path='/terms' exact component={TermsCondition} />
+          <Route path='/main' component={MainPage} />
         </Switch>
       </Router>
     );

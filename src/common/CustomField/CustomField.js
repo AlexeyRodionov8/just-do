@@ -3,22 +3,22 @@ import React from 'react';
 import styles from './customField.module.css';
 
 const CustomField = props => {
-    const icon = props.icon ?
-        <img className={styles.icon} src={props.icon} onClick={props.click} alt='' /> :
+    const { icon, click, inputType, placeholder, error } = props;
+
+    const logo = icon ?
+        <img className={styles.icon} src={icon} onClick={click} alt='' /> :
         null;
 
     return (
         <div className={styles.fieldBlock}>
             <input
                 className={styles.field}
-                type={props.type}
-                placeholder={props.placeholder}
+                type={inputType}
+                placeholder={placeholder}
             />
-
-            { icon }
-
+            { logo }
             <div className={styles.error}>
-                { props.error }
+                { error }
             </div>
         </div>
     );
