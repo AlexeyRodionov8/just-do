@@ -1,0 +1,15 @@
+.wrapper {
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 4px gray;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    z-index: 300;
+    color: black;
+}

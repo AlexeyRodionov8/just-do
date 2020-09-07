@@ -1,0 +1,15 @@
+.buttonItem {
+    width: 16px;
+    height: 16px;
+    margin-right: 1.7rem;
+    cursor: pointer;
+}
+
+.default svg {
+    stroke: #BBBBC7;
+}
+
+.clicked svg {
+    stroke: #66A1F1;
+    stroke-width: 32;
+}

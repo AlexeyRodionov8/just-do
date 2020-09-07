@@ -1,8 +1,6 @@
 .box {
     flex-shrink: 0;
-    background-color: coral;
 }
-
 
 .fieldBlock {
     position: relative;
@@ -25,4 +23,29 @@
 
 .field::placeholder {
     color: #cdcdcd;
+}
+
+.toolPanel {
+    margin-top: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonList {
+    display: flex;
+}
+
+.sendButton {
+    color: #2F80ED;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: white;
+    cursor: pointer;
+}
+
+.sendButton,
+.sendButton:active,
+.sendButton:focus {
+    border: none;
+    outline: none;
 }

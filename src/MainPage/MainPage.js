@@ -6,23 +6,23 @@ import FoldingButton from '../common/FoldingButton/FoldingButton';
 import FooterInput from './FooterInput/FooterInput';
 
 const priorities = [
-    {name:'Urgently', color: ''},
-    {name:'Important', color: ''},
-    {name:'Normal', color: ''},
-    {name:'Neutral', color: ''},
+    {id: 1, name:'Urgently', color: '#F24A3C'},
+    {id: 2, name:'Important', color: '#F1A41E'},
+    {id: 3, name:'Normal', color: '#56CCF2'},
+    {id: 4, name:'Neutral', color: '#BBBBC7'},
 ];
 
 const MainPage = (props) => {
     const menuItems = priorities.map( item => {
         return (
-            <div className={styles.menuItem}>{item.name}</div>
+            <div key={item.id} className={styles.menuItem}>{item.name}</div>
         );
     });
     return (
         <div className={styles.wrapper}>
             <div className={styles.leftSide}>
                 <div className={styles.leftInside}>
-                    <img width='80%' src={logo} alt='JustDo' />
+                    <img src={logo} alt='JustDo' />
                     <div className={styles.titleBlock}>
                         <span className={styles.priorityTitle}>Priority</span>
                         <FoldingButton isOpen={false} color='white' />
@@ -43,7 +43,7 @@ const MainPage = (props) => {
                     <div className={styles.content}>
                         Rigth side
                     </div>
-                    <FooterInput />
+                    <FooterInput priorities={priorities} />
                 </div>
             </div>
         </div>

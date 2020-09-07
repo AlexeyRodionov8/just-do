@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    color: #3c3c3c;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.item > svg {
+    margin-right: 1rem;
+}
+
+.active {
+    color: #2F80ED;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}

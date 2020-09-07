@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import styles from './startPage.module.css';
 import Footer from './Footer';
@@ -10,7 +10,13 @@ import {
     CustomButton
 } from '../common/';
 
-const signIn = () => {
+const SignIn = () => {
+    const history = useHistory();
+
+    const handleClick = () => {
+        history.push('/main');
+    }
+
     return (
         <StartPage>
             <div className={styles.loginForm}>
@@ -25,7 +31,7 @@ const signIn = () => {
                     Forgot password?
                 </Link>
 
-                <CustomButton title='Sign In' />
+                <CustomButton title='Sign In' click={handleClick} />
 
                 <Link className={styles.link} to='/signup'>
                     Sign Up
@@ -37,4 +43,4 @@ const signIn = () => {
     );
 }
 
-export default signIn;
+export default SignIn;

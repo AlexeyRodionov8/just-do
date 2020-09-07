@@ -4,7 +4,6 @@ import styles from './policyAndCondition.module.css';
 import StartPage from './StartPage';
 
 const TermsCondition = props => {
-    console.log(styles);
     return (
         <StartPage>
             <div className={styles.wrap}>

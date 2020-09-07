@@ -1,0 +1,14 @@
+.buttonItem {
+    width: 16px;
+    height: 16px;
+    margin-right: 1.7rem;
+    cursor: pointer;
+}
+
+.default svg {
+    fill: #BBBBC7;
+}
+
+.clicked svg {
+    fill: #66A1F1;
+}

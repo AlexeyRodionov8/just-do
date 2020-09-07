@@ -1,0 +1,8 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper > div:last-child {
+    margin-left: 1.5rem;
+}
