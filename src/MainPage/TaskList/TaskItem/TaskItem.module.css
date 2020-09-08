@@ -1,0 +1,46 @@
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    border-bottom: 2px solid #F4F4F6;
+}
+
+.checkBoxBlock {
+    flex-grow: 0;
+    margin-right: 1.5rem;
+}
+
+.taskContent {
+    flex-grow: 1;
+}
+
+.deleteBlock {
+    flex-grow: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deleteIcon {
+    background-image: url(../../../assets/trash.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    margin: 0 3em;
+    cursor: pointer;
+}
+
+.checkBoxBlock > input {
+    transform: scale(1.4);
+}
+
+.title {
+    color: black;
+    margin-bottom: .8em;
+}
+
+.toolPanel {
+    margin-top: 1.4em;
+}

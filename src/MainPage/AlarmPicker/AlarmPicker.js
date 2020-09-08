@@ -4,12 +4,12 @@ import styles from './AlarmPicker.module.css';
 import Modal from '../Modal/Modal';
 
 const AlarmPicker = (props) => {
-    const {alarms, alarmId, changeAlarm} = props;
+    const {alarms, alarm, changeAlarm} = props;
 
     const alarmItems = alarms.map( item => {
         let classes = [styles.alarmItem];
 
-        if (item.id === alarmId) {
+        if (item.id === alarm.id) {
             classes.push(styles.active);
         }
 
@@ -17,7 +17,7 @@ const AlarmPicker = (props) => {
             <div
                 key={item.id}
                 className={classes.join(' ')}
-                onClick={() => changeAlarm(item.id)}
+                onClick={() => changeAlarm(item)}
             >
                 {item.title}
             </div>

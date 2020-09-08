@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import styles from './FooterInput.module.css';
-import * as icons from './Icons';
+import * as icons from '../Icons';
 import ButtonIcon from './ButtonIcon/ButtonIcon';
 import Calendar from '../Calendar/Calendar';
 import TimePicker from '../TimePicker/TimePicker';
@@ -10,24 +10,15 @@ import AlarmPicker from '../AlarmPicker/AlarmPicker';
 import PriorityPicker from '../PriorityPicker/PriorityPicker';
 import PriorityButton from './PriorityButton/PriorityButton';
 import * as actions from '../../redux/actions/index';
-
-const alarms = [
-    {id: 1, title: '5 min.'},
-    {id: 2, title: '10 min.'},
-    {id: 3, title: '30 min.'},
-    {id: 4, title: '1 hour.'},
-    {id: 5, title: '3 hours.'},
-    {id: 6, title: '1 day.'},
-    {id: 7, title: '1 week.'},
-];
+import * as mockData from '../../common/MockData';
 
 const FooterInput = (props) => {
     const {priorities} = props;
 
     const [text, setText] = useState('');
     const [date, setDate] = useState(new Date());
-    const [time, setTime] = useState({hour: 1, minute: 2});
-    const [alarmId, setAlarmId] = useState(3);
+    const [time, setTime] = useState({hour: 18, minute: 2});
+    const [alarm, setAlarm] = useState({id: 3, title: '30 min.'});
     const [priority, setPriority] = useState({id: 4, name:'Neutral', color: '#BBBBC7'});
     const [showCalendar, setShowCalendar] = useState(false);
     const [showTimePicker, setShowTimePicker] = useState(false);
@@ -84,8 +75,8 @@ const FooterInput = (props) => {
         setShowPriority(false);
     }
 
-    const alarmChangeHandler = (id) => {
-        setAlarmId(id);
+    const alarmChangeHandler = (alarm) => {
+        setAlarm(alarm);
         setShowAlarm(false);
     }
 
@@ -105,12 +96,14 @@ const FooterInput = (props) => {
 
     const addTaskHandler = () => {
         const newTask = {
+            id: Math.floor(Math.random() * 10000),
             title: text,
             description: '',
             date,
             time,
-            alarmId,
-            priority
+            alarm,
+            priority,
+            isComplete: false
         };
 
         dispatch(actions.addTask(newTask));
@@ -122,8 +115,8 @@ const FooterInput = (props) => {
 
         setText('');
         setDate(new Date());
-        setTime({hour: 1, minute: 2});
-        setAlarmId(3);
+        setTime({hour: 18, minute: 2});
+        setAlarm({id: 3, title: '30 min.'});
         setPriority({id: 4, name:'Neutral', color: '#BBBBC7'});
     }
 
@@ -138,7 +131,7 @@ const FooterInput = (props) => {
                     {showTimePicker && <TimePicker time={time} changeHour={hourChangeHandler} changeMinute={minuteChangeHandler} />}
                     <ButtonIcon icon={icons.clockIcon} click={showTimePickerHandler} isClicked={showTimePicker} />
 
-                    {showAlarm && <AlarmPicker alarms={alarms} alarmId={alarmId} changeAlarm={alarmChangeHandler} />}
+                    {showAlarm && <AlarmPicker alarms={mockData.alarms} alarm={alarm} changeAlarm={alarmChangeHandler} />}
                     <ButtonIcon icon={icons.bellIcon} click={showAlarmHandler} isClicked={showAlarm} />
 
                     {showPriority && <PriorityPicker priorities={priorities} priority={priority} changePriority={priorityChangeHandler} />}

@@ -4,16 +4,11 @@ import logo from './../assets/logo.svg';
 import styles from './MainPage.module.css';
 import FoldingButton from '../common/FoldingButton/FoldingButton';
 import FooterInput from './FooterInput/FooterInput';
+import TaskList from './TaskList/TaskList';
+import * as mockData from '../common/MockData';
 
-const priorities = [
-    {id: 1, name:'Urgently', color: '#F24A3C'},
-    {id: 2, name:'Important', color: '#F1A41E'},
-    {id: 3, name:'Normal', color: '#56CCF2'},
-    {id: 4, name:'Neutral', color: '#BBBBC7'},
-];
-
-const MainPage = (props) => {
-    const menuItems = priorities.map( item => {
+const MainPage = () => {
+    const menuItems = mockData.priorities.map( item => {
         return (
             <div key={item.id} className={styles.menuItem}>{item.name}</div>
         );
@@ -41,9 +36,11 @@ const MainPage = (props) => {
             <div className={styles.rightSide}>
                 <div className={styles.rightInside}>
                     <div className={styles.content}>
-                        Rigth side
+                        <TaskList />
                     </div>
-                    <FooterInput priorities={priorities} />
+                    <div className={styles.footer}>
+                        <FooterInput priorities={mockData.priorities} />
+                    </div>
                 </div>
             </div>
         </div>

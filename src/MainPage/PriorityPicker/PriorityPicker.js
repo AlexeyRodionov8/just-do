@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './PriorityPicker.module.css';
 import Modal from '../Modal/Modal';
-import * as icons from '../FooterInput/Icons';
+import * as icons from '../Icons';
 
 const PriorityPicker = (props) => {
     const {priorities, priority, changePriority} = props;
