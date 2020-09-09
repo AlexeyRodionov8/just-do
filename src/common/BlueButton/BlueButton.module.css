@@ -1,11 +1,6 @@
-.buttonWrapper {
-    margin: 2rem 0;
-}
-
 .button {
-    width: 50%;
     background-image: linear-gradient(to right, #50c0f1, #2f80ed);
-    padding: 0.5em 0;
+    padding: 0.5em 3em;
     border-radius: 2em;
     font-size: 1.2em;
     color: white;

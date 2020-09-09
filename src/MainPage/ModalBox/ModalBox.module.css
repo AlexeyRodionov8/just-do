@@ -1,0 +1,29 @@
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 400;
+}
+
+.box {
+    border-radius: 0.7em;
+    padding: 2em 3em;
+    background-color: white;
+    z-index: 410;
+}
+
+.title {
+    color: #3c3c3c;
+    text-align: center;
+    font-weight: 500;
+}
+
+.buttonBlock {
+    margin-top: 3em;
+}
