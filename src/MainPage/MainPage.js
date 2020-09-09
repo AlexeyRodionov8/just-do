@@ -6,6 +6,7 @@ import FoldingButton from '../common/FoldingButton/FoldingButton';
 import FooterInput from './FooterInput/FooterInput';
 import TaskList from './TaskList/TaskList';
 import * as mockData from '../common/MockData';
+import ThreeDotMenu from './ThreeDotMenu/ThreeDotMenu';
 
 const MainPage = () => {
     const menuItems = mockData.priorities.map( item => {
@@ -43,6 +44,8 @@ const MainPage = () => {
                     </div>
                 </div>
             </div>
+
+            <ThreeDotMenu />
         </div>
     );
 }

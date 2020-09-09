@@ -13,7 +13,7 @@ const TaskList = () => {
         currentDate.setDate(currentDate.getDate() + i);
         days.push(currentDate);
     }
-    // const daysWithTasks = 'Hey';
+
     const daysWithTasks = days.map( (day, index) => {
         const filteredTasks = taskItems.filter( task => utils.compareDate(task.date, day));
 

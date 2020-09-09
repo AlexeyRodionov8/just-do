@@ -4,7 +4,8 @@
 
 .box {
     position: absolute;
-    left: 0;
+    right: 0;
+    top: .5rem;
     background-color: white;
     box-shadow: 0 0 4px gray;
     border-radius: 4px;
@@ -13,10 +14,15 @@
     color: black;
 }
 
-.bottomBox {
-    bottom: 32px;
+.item {
+    white-space: nowrap;
+    font-size: .8rem;
+    font-weight: 400;
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    cursor: pointer;
 }
 
-.topBox {
-    top: 32px;
+.item:last-child {
+    margin-bottom: 0;
 }

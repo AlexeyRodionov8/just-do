@@ -4,7 +4,7 @@ import styles from './AlarmPicker.module.css';
 import Modal from '../Modal/Modal';
 
 const AlarmPicker = (props) => {
-    const {alarms, alarm, changeAlarm} = props;
+    const {alarms, alarm, changeAlarm, clientY} = props;
 
     const alarmItems = alarms.map( item => {
         let classes = [styles.alarmItem];
@@ -24,8 +24,10 @@ const AlarmPicker = (props) => {
         ); 
     });
 
+    const isTheTop = clientY <= 270;
+
     return (
-        <Modal>
+        <Modal isTheTop={isTheTop}>
             <div className={styles.wrapper}>
                 {alarmItems}
             </div>

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 import styles from './startPage.module.css';
 import Footer from './Footer';
 import StartPage from './StartPage';
+import CircleSpinner from '../common/CircleSpinner/CircleSpinner';
 import {
     CustomField,
     PasswordField,
@@ -11,14 +12,22 @@ import {
 } from '../common/';
 
 const SignIn = () => {
+    const [isLoad, setIsLoad] = useState(false);
     const history = useHistory();
 
     const handleClick = () => {
-        history.push('/main');
+        setIsLoad(true);
+
+        setTimeout(() => {
+            setIsLoad(false);
+            history.push('/main');
+        }, 1000);
     }
 
     return (
         <StartPage>
+            {isLoad && <CircleSpinner />}
+
             <div className={styles.loginForm}>
                 <div className={styles.title}>Sign In</div>
 

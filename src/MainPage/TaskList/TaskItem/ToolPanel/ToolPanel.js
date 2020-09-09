@@ -18,13 +18,15 @@ const ToolPanel = (props) => {
     const [showTimePicker, setShowTimePicker] = useState(false);
     const [showAlarm, setShowAlarm] = useState(false);
     const [showPriority, setShowPriority] = useState(false);
+    const [clientY, setClientY] = useState(0);
 
     const showTimePickerHandler = () => {
         closeAllModal();
         setShowTimePicker(!showTimePicker);
     }
 
-    const showAlarmHandler = () => {
+    const showAlarmHandler = (event) => {
+        setClientY(event.clientY);
         closeAllModal();
         setShowAlarm(!showAlarm);
     }
@@ -81,7 +83,7 @@ const ToolPanel = (props) => {
             <ButtonIcon icon={icons.clockIcon} click={showTimePickerHandler} isClicked={showTimePicker} />
             <nav className={styles.iconText}>{utils.objToTime(time)}</nav>
 
-            {showAlarm && <AlarmPicker alarms={mockData.alarms} alarm={alarm} changeAlarm={alarmChangeHandler} />}
+            {showAlarm && <AlarmPicker clientY={clientY} alarms={mockData.alarms} alarm={alarm} changeAlarm={alarmChangeHandler} />}
             <ButtonIcon icon={icons.bellIcon} click={showAlarmHandler} isClicked={showAlarm} />
             <nav className={styles.iconText}>{alarm.title}</nav>
         </div>

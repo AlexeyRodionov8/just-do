@@ -27,8 +27,10 @@ const TaskByDay = (props) => {
 
     return (
         <div className={styles.taskList}>
-            <div className={styles.dateTitleBlock} onClick={showTasksHandle}>
-                <span className={styles.dateTitle}>{dateTitle}</span>
+            <div className={styles.dateTitleBlock}>
+                <span className={styles.dateTitle} onClick={showTasksHandle}>
+                    {dateTitle}
+                </span>
                 <FoldingButton isOpen={!showTasks} color='#BBBBC7' />
             </div>
 

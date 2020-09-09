@@ -69,6 +69,10 @@
     min-height: 2em;
 }
 
+.content::-webkit-scrollbar {
+    display: none;
+}
+
 .footer {
     flex-shrink: 0;
     width: 100%;
