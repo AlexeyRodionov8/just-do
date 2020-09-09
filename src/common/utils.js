@@ -46,6 +46,18 @@ export const getStrByDate = (date) => {
     return dayOfWeek + ', ' + month + ' ' + day;
 }
 
+export const compareDate = (firstDate, secondDate) => {
+    if (
+        firstDate.getFullYear() === secondDate.getFullYear() &&
+        firstDate.getMonth() === secondDate.getMonth() &&
+        firstDate.getDate() === secondDate.getDate()
+    ) {
+        return true;
+    }
+
+    return false;
+}
+
 /* TIME */
 export const objToTime = (time) => {
     const hour = ('0' + time.hour).slice(-2);
