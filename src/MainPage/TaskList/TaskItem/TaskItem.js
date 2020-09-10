@@ -52,7 +52,7 @@ const TaskItem = (props) => {
                 onMouseLeave={ () => setShowDelete(false) }
             >
                 <div className={styles.checkBoxBlock}>
-                    <input type='checkbox' value={task.isComplete} onChange={updateCompleteHandle} />
+                    <input type='checkbox' checked={task.isComplete} onChange={updateCompleteHandle} />
                 </div>
 
                 <div className={styles.taskContent}>

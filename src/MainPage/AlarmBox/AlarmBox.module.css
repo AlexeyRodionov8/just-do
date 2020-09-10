@@ -1,0 +1,62 @@
+.wrapper {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    background-color: white;
+    border-radius: .5rem 0 0 .5rem;
+    box-shadow: 0 0 5px #d3d3d3;
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+    height: 7rem;
+}
+
+.content {
+    margin: auto .5rem;
+    margin-left: 1.4rem;
+    overflow: hidden;
+}
+
+.head {
+    display: flex;
+}
+
+.time {
+    margin-left: -1.2rem;
+    color: #1f1f1f;
+}
+
+.title {
+    color: #1f1f1f;
+    font-size: .9rem;
+    margin: .5rem 0;
+}
+
+.description {
+    font-size: .8rem;
+}
+
+.buttonBox {
+    border-left: 1px solid #EAEAED;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.buttonWrapper {
+    border-bottom: 1px solid #EAEAED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    position: relative;
+}
+
+.buttonWrapper:last-child {
+    border-bottom: none;
+}
+
+.button {
+   user-select: none;
+   cursor: pointer;
+}

@@ -7,6 +7,7 @@ import FooterInput from './FooterInput/FooterInput';
 import TaskList from './TaskList/TaskList';
 import * as mockData from '../common/MockData';
 import ThreeDotMenu from './ThreeDotMenu/ThreeDotMenu';
+import AlarmBox from './AlarmBox/AlarmBox';
 
 const MainPage = () => {
     const menuItems = mockData.priorities.map( item => {
@@ -16,6 +17,9 @@ const MainPage = () => {
     });
     return (
         <div className={styles.wrapper}>
+            <ThreeDotMenu />
+            <AlarmBox />
+
             <div className={styles.leftSide}>
                 <div className={styles.leftInside}>
                     <img src={logo} alt='JustDo' />
@@ -44,8 +48,6 @@ const MainPage = () => {
                     </div>
                 </div>
             </div>
-
-            <ThreeDotMenu />
         </div>
     );
 }
